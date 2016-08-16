@@ -1,0 +1,14 @@
+{% extends 'qa/base.html' %}
+
+{% block content %}
+
+<form action='/login/' method='post'>
+	{% csrf_token %}
+	<label for='name_id'>My name</label>
+	<input id='name_id' type='text' name='username'>
+	<label for='name_id1'>My name</label>
+	<input id='name_id1' type='password' name='password'>
+	<input type='submit' value='OK'>
+</form>
+
+{% endblock %}

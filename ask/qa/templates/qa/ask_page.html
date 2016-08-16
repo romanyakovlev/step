@@ -1,0 +1,12 @@
+{% extends 'qa/base.html' %}
+
+{% block content %}
+
+<form method="post" action="/ask/">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Apply</button>
+</form>
+
+{{user}}
+{% endblock %}

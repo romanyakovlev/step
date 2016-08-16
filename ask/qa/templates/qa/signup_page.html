@@ -1,0 +1,12 @@
+{% extends 'qa/base.html' %}
+
+{% block content %}
+  <form action="/signup/" method="post">
+    {% csrf_token %}
+    <label for=""><input type="text" name="username" value="">Login</label>
+    <label for=""><input type="email" name="email" value="">Email</label>
+    <label for=""><input type="password" name="password" value="">Password</label>
+    <button type="submit">Apply</button>
+  </form>
+  
+{% endblock %}
